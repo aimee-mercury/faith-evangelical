@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login • Faith Evangelical Church</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .auth-wrap{min-height:100vh;display:grid;place-items:center;background:#f5f5f5}
+        .auth-card{background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.12);padding:28px;width:min(420px,92%)}
+        .auth-card h1{margin:0 0 6px}
+        .auth-card p{margin:0 0 18px}
+        .field{display:grid;gap:6px;margin:10px 0}
+        .field input{padding:12px;border:1px solid #ddd;border-radius:8px;font-family:inherit}
+        .btn{width:100%}
+        .note{font-size:12px;color:#6b7280;margin-top:10px}
+        .err{color:#b21e35;margin:6px 0 0;font-size:14px}
+        .links{display:flex;justify-content:space-between;margin-top:10px}
+        .links a{color:var(--primary)}
+    </style>
+    <script>
+        (function(){
+            const AUTH_KEY='fec_auth';
+            document.addEventListener('DOMContentLoaded',()=>{
+                const form=document.getElementById('loginForm');
+                const err=document.getElementById('err');
+                form.addEventListener('submit',(e)=>{
+                    e.preventDefault();
+                    const email=document.getElementById('email').value.trim();
+                    const password=document.getElementById('password').value;
+                    if(email==='aimee@gmail.com' && password==='12345'){
+                        localStorage.setItem(AUTH_KEY, JSON.stringify({ email, at: Date.now() }));
+                        window.location.href='admin.html';
+                    } else {
+                        err.textContent='Invalid email or password';
+                    }
+                });
+            });
+        })();
+    </script>
+</head>
+<body>
+    <div class="auth-wrap">
+        <div class="auth-card">
+            <h1>Staff Login</h1>
+            <p>Restricted area for church staff.</p>
+            <form id="loginForm">
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" required placeholder="name@example.com" value="aimee@gmail.com">
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" required placeholder="•••••" value="12345">
+                </div>
+                <button class="btn" type="submit">Sign In</button>
+                <div id="err" class="err"></div>
+            </form>
+            <div class="links">
+                <a href="index.html">← Back to site</a>
+                <span class="note">Use your staff credentials</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

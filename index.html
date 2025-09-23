@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith Evangelical Church</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">FEC</div>
+                <div class="logo-text">
+                    <h1>Faith Evangelical Church</h1>
+                    <p>Faith • Hope • Love</p>
+                </div>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn">☰</button>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#ministries">Ministries</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Media</a></li>
+                    <li><a href="login.html">Staff</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-media" aria-hidden="true">
+                <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"></video>
+            </div>
+            <div class="hero-content">
+                <h1>Welcome Home</h1>
+                <p>We are a Christ-centered community dedicated to worship, discipleship, and serving our city. There's a place for you here.</p>
+                <div class="hero-btns">
+                    <a href="#gallery" class="btn">Watch Services</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="scripture"><span id="scriptureText">“For the Son of Man came to seek and to save the lost.” — Luke 19:10</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Faith Evangelical Church</h2>
+                    <p>Faith Evangelical Church is a welcoming family of believers. We gather weekly to worship Jesus, grow through God's Word, and serve our neighbors with compassion. Whether you're exploring faith or seeking a church home, you are welcome here.</p>
+                    <p>Since our founding in 1996, we've been committed to preaching the Gospel in every sermon and creating a community where people can grow in their relationship with God.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>27+</h3>
+                            <p>Years of Ministry</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Active Members</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Community Programs</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn">Visit Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517963628607-235ccdd5476b?q=80&w=1400&auto=format&fit=crop" alt="Members worshipping joyfully">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ministries Section -->
+    <section id="ministries" class="ministries">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Ministries</h2>
+                <p>Discover opportunities to grow, serve, and connect with others in our church family.</p>
+            </div>
+            <div class="ministry-cards">
+                <div class="ministry-card">
+                    <div class="ministry-img">
+                        <img src="https://images.unsplash.com/photo-1520975922421-c6e8d5d64c60?q=80&w=1400&auto=format&fit=crop" alt="Children's Ministry">
+                    </div>
+                    <div class="ministry-content">
+                        <h3>Children's Ministry</h3>
+                        <p>Our children's ministry provides a safe and nurturing environment where kids learn about God's love through engaging activities and Bible lessons.</p>
+                        <a href="#" class="read-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="ministry-card">
+                    <div class="ministry-img">
+                        <img src="https://images.unsplash.com/photo-1515165562835-c3b8c814f052?q=80&w=1400&auto=format&fit=crop" alt="Youth Ministry">
+                    </div>
+                    <div class="ministry-content">
+                        <h3>Youth Ministry</h3>
+                        <p>We help teenagers navigate their faith journey through relevant teaching, fellowship, and service opportunities that strengthen their relationship with Christ.</p>
+                        <a href="#" class="read-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="ministry-card">
+                    <div class="ministry-img">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop" alt="Adult Ministry">
+                    </div>
+                    <div class="ministry-content">
+                        <h3>Adult Ministry</h3>
+                        <p>Our adult ministries provide opportunities for spiritual growth, fellowship, and service through small groups, Bible studies, and outreach programs.</p>
+                        <a href="#" class="read-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="ministry-card">
+                    <div class="ministry-img">
+                        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1400&auto=format&fit=crop" alt="Outreach Ministry">
+                    </div>
+                    <div class="ministry-content">
+                        <h3>Outreach Ministry</h3>
+                        <p>We're passionate about serving our community through food drives, neighborhood cleanups, and partnerships with local organizations.</p>
+                        <a href="#" class="read-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Events</h2>
+                <p>Join us for fellowship, worship, and community-building activities.</p>
+            </div>
+            <div class="events-container">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">OCT</span>
+                        <span class="day">15</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Fall Festival</h3>
+                        <p class="event-time">4:00 PM - 7:00 PM</p>
+                        <p>Family-friendly event with games, food, and fellowship for all ages.</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">OCT</span>
+                        <span class="day">22</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Baptism Sunday</h3>
+                        <p class="event-time">During Worship Service</p>
+                        <p>Celebrate with those publicly declaring their faith through baptism.</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">NOV</span>
+                        <span class="day">05</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Community Food Drive</h3>
+                        <p class="event-time">9:00 AM - 12:00 PM</p>
+                        <p>Help us collect non-perishable food items for local families in need.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="events-btn">
+                <a href="#" class="btn">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Service Times</h2>
+                <p>Join us for worship, prayer, and fellowship throughout the week.</p>
+            </div>
+            <div class="service-times">
+                <div class="service-time">
+                    <h3>Sunday Worship</h3>
+                    <p class="time">10:00 AM</p>
+                    <p>Join us for uplifting worship and Biblical teaching</p>
+                </div>
+                <div class="service-time">
+                    <h3>Prayer Night</h3>
+                    <p class="time">7:00 PM (Wednesdays)</p>
+                    <p>Corporate prayer and intercession for our church and community</p>
+                </div>
+                <div class="service-time">
+                    <h3>Youth Group</h3>
+                    <p class="time">6:30 PM (Fridays)</p>
+                    <p>Fun, fellowship and faith-building for teenagers</p>
+                </div>
+                <div class="service-time">
+                    <h3>Bible Study</h3>
+                    <p class="time">7:00 PM (Tuesdays)</p>
+                    <p>In-depth study of God's Word for spiritual growth</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What People Say</h2>
+                <p>Hear from members of our church family about their experiences.</p>
+            </div>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Faith Evangelical Church has been a spiritual home for our family for over 10 years. The teaching is biblical, the community is loving, and we've grown so much in our faith."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Michael & Sarah Johnson</h4>
+                        <p>Members since 2012</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a newcomer, I was immediately welcomed and felt at home. The sermons speak directly to real-life challenges, and the small groups have helped me build meaningful relationships."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Jessica Martinez</h4>
+                        <p>New Member</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Our kids love the children's ministry! The volunteers are caring and creative in teaching biblical truths in ways children can understand and apply."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>The Williams Family</h4>
+                        <p>Active Members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery -->
+    <section id="gallery" class="media-gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Previous Services</h2>
+                <p>Browse through photos and videos from our recent gatherings and events.</p>
+            </div>
+            
+            <div class="upload-section">
+                <h3>Upload Media</h3>
+                <p>Add images or videos from previous services to our gallery. Files are stored locally in your browser.</p>
+                <div class="upload-controls">
+                    <input type="file" id="fileInput" accept="image/*,video/*" multiple>
+                    <button class="btn" id="uploadBtn">Upload</button>
+                    <button class="btn btn-secondary" id="clearGallery">Clear Gallery</button>
+                </div>
+            </div>
+            
+            <div class="gallery" id="mediaGallery">
+                <div class="empty-gallery">
+                    <p>No media uploaded yet. Use the upload section above to add images or videos from previous services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you. Reach out with questions or to learn more about our church.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <p>📍 123 Faith Avenue, Your City</p>
+                        <p>📞 (555) 123-4567</p>
+                        <p>✉️ hello@faithevangelical.church</p>
+                    </div>
+                    <h3>Office Hours</h3>
+                    <div class="office-hours">
+                        <p>Monday - Thursday: 9:00 AM - 5:00 PM</p>
+                        <p>Friday: 9:00 AM - 12:00 PM</p>
+                        <p>Saturday: Closed</p>
+                        <p>Sunday: 8:00 AM - 1:00 PM</p>
+                    </div>
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Faith Evangelical Church</h3>
+                    <p>A place to grow in faith and community since 1996.</p>
+                    <div class="footer-logo">
+                        <div class="logo-icon small">FEC</div>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#ministries">Ministries</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#services">Service Times</a></li>
+                        <li><a href="#gallery">Media Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Sermons</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Give</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Prayer Requests</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and announcements.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Faith Evangelical Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Edit Media</h3>
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="editTitle">Title</label>
+                    <input type="text" id="editTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="editDescription">Description</label>
+                    <textarea id="editDescription"></textarea>
+                </div>
+                <input type="hidden" id="editId">
+                <button type="submit" class="btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
