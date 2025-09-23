@@ -1,7 +1,7 @@
 :root {
     --primary: #b21e35; /* salvation red */
     --secondary: #ff7f50; /* coral warmth */
-    --accent: #5b4bff; /* soft purple */
+    --accent: #ffffff; /* accent changed to white */
     --light: #fff6f6;
     --dark: #1f1f1f;
     --text: #2C2C2C;
@@ -46,7 +46,7 @@ h2::after {
     left: 0;
     width: 60px;
     height: 3px;
-    background: var(--accent);
+    background: var(--primary);
 }
 
 p {
@@ -726,7 +726,7 @@ footer {
     left: 0;
     width: 40px;
     height: 2px;
-    background: var(--accent);
+    background: var(--primary);
 }
 
 .footer-column p {

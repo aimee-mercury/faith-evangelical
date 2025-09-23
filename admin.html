@@ -45,7 +45,16 @@
             function save(list){ localStorage.setItem(STORE_KEY, JSON.stringify(list)); }
             function addEmpty(){ const list=load(); list.push({ id: Date.now(), name:'', nationalId:'', phone:'', district:'', sector:'', village:'' }); save(list); render(); }
             function removeRow(rowId){ const list=load().filter(r=>r.id!==rowId); save(list); render(); }
-            function updateField(rowId, field, value){ const list=load(); const idx=list.findIndex(r=>r.id===rowId); if(idx>-1){ list[idx][field]=value; save(list); }}
+            function sanitizeTextOnly(v){ return String(v||'').replace(/[0-9]/g,''); }
+            function updateField(rowId, field, value){
+                const list=load();
+                const idx=list.findIndex(r=>r.id===rowId);
+                if(idx>-1){
+                    let next=value;
+                    if(field==='district' || field==='sector' || field==='village') next = sanitizeTextOnly(value);
+                    list[idx][field]=next; save(list);
+                }
+            }
             // clearAll removed per request (no global deletion)
             function exportExcel(){ const list=load(); const ws=XLSX.utils.json_to_sheet(list.map(({id, ...rest})=>rest)); const wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Members'); XLSX.writeFile(wb, 'members.xlsx'); }
             function exportPdf(){
@@ -110,12 +119,12 @@
                 list.forEach(row=>{
                     const tr=document.createElement('tr');
                     tr.innerHTML=`
-                        <td><input value="${row.name}" /></td>
-                        <td><input value="${row.nationalId}" /></td>
-                        <td><input value="${row.phone}" /></td>
-                        <td><input value="${row.district}" /></td>
-                        <td><input value="${row.sector}" /></td>
-                        <td><input value="${row.village}" /></td>
+                        <td><input type="text" placeholder="Full name" value="${row.name}" /></td>
+                        <td><input type="text" placeholder="ID number" value="${row.nationalId}" /></td>
+                        <td><input type="tel" inputmode="numeric" pattern="[0-9\s+\-()]*" placeholder="Telephone" value="${row.phone}" /></td>
+                        <td><input type="text" inputmode="text" pattern="[A-Za-z\s\-']+" title="Letters only" placeholder="District" value="${row.district}" /></td>
+                        <td><input type="text" inputmode="text" pattern="[A-Za-z\s\-']+" title="Letters only" placeholder="Sector" value="${row.sector}" /></td>
+                        <td><input type="text" inputmode="text" pattern="[A-Za-z\s\-']+" title="Letters only" placeholder="Village" value="${row.village}" /></td>
                         <td><button class="btn small" data-del="${row.id}">Delete</button></td>
                     `;
                     const inputs=tr.querySelectorAll('input');
