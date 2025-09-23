@@ -76,7 +76,7 @@ a:hover {
     padding: 12px 24px;
     background: var(--primary);
     color: white;
-    border: none;
+    border: 2px solid transparent;
     border-radius: var(--radius);
     font-weight: 600;
     cursor: pointer;
@@ -85,7 +85,9 @@ a:hover {
 }
 
 .btn:hover {
-    background: var(--secondary);
+    background: transparent; /* colorless look on hover */
+    color: var(--primary);
+    border-color: var(--primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
