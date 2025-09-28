@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard • Faith Evangelical Church</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+         .dashboard-header {
+             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+             color: white;
+             padding: 20px 0;
+             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+         }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+            color: white;
+        }
+        
+        .header-title h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .header-title p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            border: 1px solid #2c3e50;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+        }
+        
+        .btn-secondary {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #c82333;
+        }
+        
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        
+         .stat-card {
+             background: white;
+             padding: 25px;
+             border-radius: 12px;
+             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+             display: flex;
+             align-items: center;
+             gap: 20px;
+             transition: all 0.3s ease;
+         }
+         
+         .stat-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+         }
+        
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+        
+         .stat-icon.members { background: linear-gradient(135deg, #2c3e50, #34495e); }
+        
+        .stat-content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .stat-content p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+         .dashboard-grid {
+             display: grid;
+             grid-template-columns: 1fr;
+             gap: 30px;
+             margin-bottom: 30px;
+         }
+        
+         .main-card {
+             background: white;
+             border-radius: 12px;
+             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+             overflow: hidden;
+             transition: all 0.3s ease;
+         }
+         
+         .main-card:hover {
+             box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+         }
+        
+        .card-header {
+            padding: 20px 25px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #ffd615;
+        }
+        
+        .card-header h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #555;
+            border-bottom: 2px solid #ffd615;
+        }
+        
+         .table tbody tr:hover {
+             background: #f8f9fa;
+             transform: translateY(-1px);
+             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+         }
+         
+         .table tbody tr {
+             transition: all 0.3s ease;
+         }
+        
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .status-active {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .quick-actions {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .action-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .action-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .action-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+        }
+        
+         .action-icon.members { background: #2c3e50; }
+         .action-icon.events { background: #e74c3c; }
+         .action-icon.reports { background: #27ae60; }
+        
+        .recent-activity {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+        }
+        
+        .activity-content {
+            flex: 1;
+        }
+        
+        .activity-content h4 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        
+        .activity-content p {
+            font-size: 12px;
+            color: #666;
+        }
+        
+         .activity-time {
+             font-size: 12px;
+             color: #999;
+         }
+         
+         .member-form {
+             background: white;
+             border-radius: 12px;
+             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+             margin-bottom: 30px;
+             overflow: hidden;
+         }
+         
+         .form-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 20px;
+             padding: 25px;
+         }
+         
+         .form-group {
+             display: flex;
+             flex-direction: column;
+         }
+         
+         .form-group label {
+             font-weight: 600;
+             color: #333;
+             margin-bottom: 8px;
+             font-size: 14px;
+         }
+         
+         .form-group input {
+             padding: 12px;
+             border: 2px solid #e1e5e9;
+             border-radius: 8px;
+             font-size: 14px;
+             transition: all 0.3s ease;
+         }
+         
+         .form-group input:focus {
+             outline: none;
+             border-color: #ffd615;
+             box-shadow: 0 0 0 3px rgba(255, 214, 21, 0.1);
+         }
+         
+         .form-group input.error {
+             border-color: #e74c3c;
+             box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+         }
+         
+         .form-group input.error:focus {
+             border-color: #e74c3c;
+             box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+         }
+         
+         .error-message {
+             color: #e74c3c;
+             font-size: 12px;
+             margin-top: 5px;
+             display: none;
+         }
+         
+         .form-group.error .error-message {
+             display: block;
+         }
+         
+         .form-actions {
+             padding: 20px 25px;
+             background: #f8f9fa;
+             border-top: 1px solid #eee;
+             display: flex;
+             gap: 15px;
+             justify-content: flex-end;
+         }
+         
+         .form-toggle {
+             display: none;
+         }
+         
+         .form-toggle:checked + .member-form {
+             display: block;
+         }
+         
+         .member-form {
+             display: none;
+         }
+         
+         @media (max-width: 768px) {
+             .dashboard-grid {
+                 grid-template-columns: 1fr;
+             }
+             
+             .stats-grid {
+                 grid-template-columns: 1fr;
+             }
+             
+             .header-content {
+                 flex-direction: column;
+                 gap: 15px;
+                 text-align: center;
+             }
+             
+             .form-grid {
+                 grid-template-columns: 1fr;
+             }
+             
+             .form-actions {
+                 flex-direction: column;
+             }
+         }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <span class="flaticon-bible"></span>
+                </div>
+                <div class="header-title">
+                    <h1>Admin Dashboard</h1>
+                    <p>Faith Evangelical Church Management</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <a href="index.html" class="btn btn-primary">
+                    <span class="icon-home"></span> Back to Website
+                </a>
+                <button id="logoutBtn" class="btn">
+                    <span class="icon-exit"></span> Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Welcome Section -->
+        <div class="welcome-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); color: #333; padding: 30px; border-radius: 15px; margin-bottom: 30px; text-align: center; border-left: 4px solid #ffd615;">
+            <h2 style="font-size: 28px; margin-bottom: 10px; font-weight: 600;">Murakaza neza mu Dashboard</h2>
+            <p style="font-size: 16px; opacity: 0.9; margin: 0;">Gucunga abayoboke bo mu Karere - Faith Evangelical Church</p>
+        </div>
+
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon members">
+                    <span class="icon-users"></span>
+                </div>
+                <div class="stat-content">
+                    <h3 id="totalMembers">1,247</h3>
+                    <p>Total Members</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Member Form -->
+        <input type="checkbox" id="showForm" class="form-toggle">
+        <div class="member-form">
+            <div class="card-header">
+                <h3>Ongeramo Umuntu Mushya</h3>
+                <button onclick="closeForm()" class="btn btn-secondary" style="padding: 8px 15px; font-size: 14px;">
+                    <span class="icon-close"></span> Gufunga
+                </button>
+            </div>
+            <form id="memberForm">
+                <div class="form-grid">
+                         <div class="form-group">
+                             <label for="amazina">AMAZINA Y'UMUNTU *</label>
+                             <input type="text" id="amazina" name="amazina" required>
+                             <div class="error-message">Murakeneye gujuzanya amazina y'umuntu</div>
+                         </div>
+                    <div class="form-group">
+                        <label for="ahoAtuye">AHO ATUYE *</label>
+                        <input type="text" id="ahoAtuye" name="ahoAtuye" required>
+                        <div class="error-message">Murakeneye gujuzanya aho umuntu atuye</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pasiporo">No Z'INDANGAMUNTU PASIPORO</label>
+                        <input type="text" id="pasiporo" name="pasiporo">
+                    </div>
+                    <div class="form-group">
+                        <label for="ewukond">No YA EWUKOND</label>
+                        <input type="text" id="ewukond" name="ewukond">
+                    </div>
+                    <div class="form-group">
+                        <label for="akarere">AKARERE *</label>
+                        <input type="text" id="akarere" name="akarere" required>
+                        <div class="error-message">Murakeneye gujuzanya akarere</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="umurenge">UMURENGE *</label>
+                        <input type="text" id="umurenge" name="umurenge" required>
+                        <div class="error-message">Murakeneye gujuzanya umurenge</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="akagari">AKAGARI *</label>
+                        <input type="text" id="akagari" name="akagari" required>
+                        <div class="error-message">Murakeneye gujuzanya akagari</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="umudugudu">UMUDUGUDU *</label>
+                        <input type="text" id="umudugudu" name="umudugudu" required>
+                        <div class="error-message">Murakeneye gujuzanya umudugudu</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">TELEFONE *</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        <div class="error-message">Murakeneye gujuzanya numero ya telefone</div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeForm()" class="btn btn-secondary">
+                        <span class="icon-close"></span> Gufunga
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="icon-check"></span> Ongeramo
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Main Dashboard Grid -->
+        <div class="dashboard-grid">
+             <!-- Member Management Table -->
+             <div class="main-card">
+                 <div class="card-header">
+                     <h3>MU KARERE UMURYANGO WIFUZA GUKORERAMO</h3>
+                     <div style="display: flex; gap: 10px;">
+                         <button class="btn btn-primary" onclick="addNewMember()">
+                             <span class="icon-plus"></span> Ongeramo
+                         </button>
+                         <label class="btn btn-primary" for="excelImport" style="margin: 0;">
+                             <span class="icon-document"></span> Excel
+                         </label>
+                         <input id="excelImport" type="file" accept=".xlsx,.xls" style="display: none;">
+                     </div>
+                 </div>
+                 <div class="card-content">
+                     <div style="overflow-x: auto;">
+                         <table class="table">
+                             <thead>
+                                 <tr>
+                                     <th>No</th>
+                                     <th>AMAZINA Y'UMUNTU</th>
+                                     <th>AHO ATUYE</th>
+                                     <th>No Z'INDANGAMUNTU PASIPORO</th>
+                                     <th>No YA EWUKOND</th>
+                                     <th>AKARERE</th>
+                                     <th>UMURENGE</th>
+                                     <th>AKAGARI</th>
+                                     <th>UMUDUGUDU</th>
+                                     <th>TELEFONE</th>
+                                     <th>Actions</th>
+                                 </tr>
+                             </thead>
+                             <tbody id="membersTable">
+                                 <tr>
+                                     <td>1</td>
+                                     <td>John Smith</td>
+                                     <td>Kigali</td>
+                                     <td>1234567890123456</td>
+                                     <td>987654321</td>
+                                     <td>Kigali</td>
+                                     <td>Nyarugenge</td>
+                                     <td>Kimisagara</td>
+                                     <td>Gikondo</td>
+                                     <td>0781234567</td>
+                                     <td>
+                                         <button class="btn btn-primary" style="padding: 5px 10px; font-size: 12px;">Edit</button>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td>2</td>
+                                     <td>Sarah Johnson</td>
+                                     <td>Kigali</td>
+                                     <td>2345678901234567</td>
+                                     <td>876543210</td>
+                                     <td>Kigali</td>
+                                     <td>Gasabo</td>
+                                     <td>Kimironko</td>
+                                     <td>Kacyiru</td>
+                                     <td>0782345678</td>
+                                     <td>
+                                         <button class="btn btn-primary" style="padding: 5px 10px; font-size: 12px;">Edit</button>
+                                     </td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+             </div>
+
+        </div>
+
+        <!-- Floating Action Button -->
+        <div class="floating-actions" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+            <button onclick="generateReports()" class="btn btn-primary" style="padding: 15px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 8px;">
+                <span class="icon-document"></span>
+                <span>Raporo</span>
+            </button>
+        </div>
+
+    </div>
+
+     <!-- Include necessary libraries for Excel -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+     
+     <script>
+         let membersData = [];
+
+         document.addEventListener('DOMContentLoaded', function() {
+             // Check authentication
+             const authData = localStorage.getItem('fec_auth');
+             if (!authData) {
+                 window.location.href = 'login.html';
+                 return;
+             }
+
+             const auth = JSON.parse(authData);
+             if (!auth.email || Date.now() - auth.at > 24 * 60 * 60 * 1000) {
+                 localStorage.removeItem('fec_auth');
+                 window.location.href = 'login.html';
+                 return;
+             }
+
+             // Update header with user info
+             const headerTitle = document.querySelector('.header-title p');
+             headerTitle.textContent = `Welcome, ${auth.email.split('@')[0]} • Faith Evangelical Church Management`;
+
+             // Logout functionality
+             document.getElementById('logoutBtn').addEventListener('click', function() {
+                 localStorage.removeItem('fec_auth');
+                 window.location.href = 'login.html';
+             });
+
+             // Excel import functionality
+             document.getElementById('excelImport').addEventListener('change', handleExcelImport);
+
+             // Form submission
+             document.getElementById('memberForm').addEventListener('submit', handleFormSubmit);
+             
+             // Real-time validation
+             const requiredFields = ['amazina', 'ahoAtuye', 'akarere', 'umurenge', 'akagari', 'umudugudu', 'telefone'];
+             requiredFields.forEach(fieldName => {
+                 const field = document.getElementById(fieldName);
+                 field.addEventListener('input', function() {
+                     if (this.value.trim()) {
+                         this.classList.remove('error');
+                         this.closest('.form-group').classList.remove('error');
+                     }
+                 });
+             });
+
+             // Load dashboard data
+             loadDashboardData();
+             renderMembersTable();
+             updateTotalMembers();
+         });
+
+         function loadDashboardData() {
+             // Load members data from localStorage if available
+             const savedData = localStorage.getItem('fec_members');
+             if (savedData) {
+                 membersData = JSON.parse(savedData);
+             }
+         }
+
+         function saveMembersData() {
+             localStorage.setItem('fec_members', JSON.stringify(membersData));
+             updateTotalMembers();
+         }
+
+         function updateTotalMembers() {
+             const totalMembersElement = document.getElementById('totalMembers');
+             if (totalMembersElement) {
+                 totalMembersElement.textContent = membersData.length.toLocaleString();
+             }
+         }
+
+         function renderMembersTable() {
+             const tbody = document.getElementById('membersTable');
+             tbody.innerHTML = '';
+
+             membersData.forEach((member, index) => {
+                 const row = document.createElement('tr');
+                 row.innerHTML = `
+                     <td>${member.no}</td>
+                     <td>${member.amazina}</td>
+                     <td>${member.ahoAtuye}</td>
+                     <td>${member.pasiporo}</td>
+                     <td>${member.ewukond}</td>
+                     <td>${member.akarere}</td>
+                     <td>${member.umurenge}</td>
+                     <td>${member.akagari}</td>
+                     <td>${member.umudugudu}</td>
+                     <td>${member.telefone}</td>
+                     <td>
+                         <button class="btn btn-primary" style="padding: 5px 10px; font-size: 12px;" onclick="editMember(${index})">Edit</button>
+                         <button class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;" onclick="deleteMember(${index})">Delete</button>
+                     </td>
+                 `;
+                 tbody.appendChild(row);
+             });
+         }
+
+         function addNewMember() {
+             document.getElementById('showForm').checked = true;
+             document.getElementById('memberForm').reset();
+         }
+
+         function closeForm() {
+             document.getElementById('showForm').checked = false;
+             document.getElementById('memberForm').reset();
+             document.getElementById('memberForm').removeAttribute('data-edit-index');
+             
+             // Clear validation errors
+             const requiredFields = ['amazina', 'ahoAtuye', 'akarere', 'umurenge', 'akagari', 'umudugudu', 'telefone'];
+             requiredFields.forEach(fieldName => {
+                 const field = document.getElementById(fieldName);
+                 const formGroup = field.closest('.form-group');
+                 field.classList.remove('error');
+                 formGroup.classList.remove('error');
+             });
+             
+             // Reset form title and button
+             document.querySelector('.member-form .card-header h3').textContent = 'Ongeramo Umuntu Mushya';
+             document.querySelector('.member-form button[type="submit"]').innerHTML = '<span class="icon-check"></span> Ongeramo';
+         }
+
+         function validateForm() {
+             const requiredFields = ['amazina', 'ahoAtuye', 'akarere', 'umurenge', 'akagari', 'umudugudu', 'telefone'];
+             let isValid = true;
+             
+             // Clear previous errors
+             requiredFields.forEach(fieldName => {
+                 const field = document.getElementById(fieldName);
+                 const formGroup = field.closest('.form-group');
+                 field.classList.remove('error');
+                 formGroup.classList.remove('error');
+             });
+             
+             // Validate each required field
+             requiredFields.forEach(fieldName => {
+                 const field = document.getElementById(fieldName);
+                 const formGroup = field.closest('.form-group');
+                 
+                 if (!field.value.trim()) {
+                     field.classList.add('error');
+                     formGroup.classList.add('error');
+                     isValid = false;
+                 }
+             });
+             
+             return isValid;
+         }
+
+         function handleFormSubmit(event) {
+             event.preventDefault();
+             
+             // Validate form first
+             if (!validateForm()) {
+                 alert("Murakeneye gujuzanya amashami yose yanditse n'inkota (*)");
+                 return;
+             }
+             
+             const formData = new FormData(event.target);
+             const editIndex = event.target.getAttribute('data-edit-index');
+             
+             const memberData = {
+                 amazina: formData.get('amazina'),
+                 ahoAtuye: formData.get('ahoAtuye'),
+                 pasiporo: formData.get('pasiporo'),
+                 ewukond: formData.get('ewukond'),
+                 akarere: formData.get('akarere'),
+                 umurenge: formData.get('umurenge'),
+                 akagari: formData.get('akagari'),
+                 umudugudu: formData.get('umudugudu'),
+                 telefone: formData.get('telefone')
+             };
+
+             // Additional validation (redundant but safe)
+             if (memberData.amazina && memberData.ahoAtuye && memberData.akarere && memberData.umurenge && memberData.akagari && memberData.umudugudu && memberData.telefone) {
+                 if (editIndex !== null) {
+                     // Editing existing member
+                     memberData.no = membersData[editIndex].no;
+                     membersData[editIndex] = memberData;
+                     alert("Amakuru yavuguruwe neza!");
+                 } else {
+                     // Adding new member
+                     memberData.no = membersData.length + 1;
+                     membersData.push(memberData);
+                     alert("Umuntu wongewemo neza!");
+                 }
+                 
+                 saveMembersData();
+                 renderMembersTable();
+                 closeForm();
+             } else {
+                 alert("Murakeneye gujuzanya amashami yose yanditse n'inkota (*)");
+             }
+         }
+
+         function editMember(index) {
+             const member = membersData[index];
+             
+             // Fill form with existing data
+             document.getElementById('amazina').value = member.amazina;
+             document.getElementById('ahoAtuye').value = member.ahoAtuye;
+             document.getElementById('pasiporo').value = member.pasiporo;
+             document.getElementById('ewukond').value = member.ewukond;
+             document.getElementById('akarere').value = member.akarere;
+             document.getElementById('umurenge').value = member.umurenge;
+             document.getElementById('akagari').value = member.akagari;
+             document.getElementById('umudugudu').value = member.umudugudu;
+             document.getElementById('telefone').value = member.telefone;
+             
+             // Store the index for editing
+             document.getElementById('memberForm').setAttribute('data-edit-index', index);
+             
+             // Change form title and button
+             document.querySelector('.member-form .card-header h3').textContent = 'Guhindura Amakuru y\'Umuntu';
+             document.querySelector('.member-form button[type="submit"]').innerHTML = '<span class="icon-check"></span> Hindura';
+             
+             // Show form
+             document.getElementById('showForm').checked = true;
+         }
+
+         function deleteMember(index) {
+             const member = membersData[index];
+             if (!member) return;
+             
+             // First confirmation
+             const firstConfirm = confirm(`Urakoze gusiba ${member.amazina} muri uru rutonde?`);
+             if (!firstConfirm) return;
+             
+             // Second confirmation with more details
+             const secondConfirm = confirm(`Urakoze neza gusiba ${member.amazina}?\n\nAmakuru azasibwa:\n- Amazina: ${member.amazina}\n- Telefone: ${member.telefone}\n- Akarere: ${member.akarere}\n\nIcyo gikora ntigishobora guhindurwa!`);
+             if (!secondConfirm) return;
+             
+             // Third confirmation with admin verification
+             const adminConfirm = prompt("Kugira ngo usibe umuntu, andika 'SIBYA' mu nyuguti nini:");
+             if (adminConfirm !== 'SIBYA') {
+                 alert("Ntabwo wemeye neza. Gusiba byahagaritswe.");
+                 return;
+             }
+             
+             // Final confirmation
+             const finalConfirm = confirm(`Urakoze neza gusiba ${member.amazina} muri uru rutonde?\n\nIcyo gikora ntigishobora guhindurwa!`);
+             if (!finalConfirm) return;
+             
+             // Delete the member
+             membersData.splice(index, 1);
+             // Update numbers
+             membersData.forEach((member, i) => {
+                 member.no = i + 1;
+             });
+             saveMembersData();
+             renderMembersTable();
+             alert(`${member.amazina} yasibwe neza muri uru rutonde.`);
+         }
+
+         function handleExcelImport(event) {
+             const file = event.target.files[0];
+             if (!file) return;
+
+             const reader = new FileReader();
+             reader.onload = function(e) {
+                 try {
+                     const data = new Uint8Array(e.target.result);
+                     const workbook = XLSX.read(data, { type: 'array' });
+                     const sheetName = workbook.SheetNames[0];
+                     const worksheet = workbook.Sheets[sheetName];
+                     const jsonData = XLSX.utils.sheet_to_json(worksheet);
+
+                     // Process Excel data
+                     const newMembers = jsonData.map((row, index) => ({
+                         no: membersData.length + index + 1,
+                         amazina: row['AMAZINA Y\'UMUNTU'] || row['Name'] || '',
+                         ahoAtuye: row['AHO ATUYE'] || row['Address'] || '',
+                         pasiporo: row['No Z\'INDANGAMUNTU PASIPORO'] || row['Passport'] || '',
+                         ewukond: row['No YA EWUKOND'] || row['ID'] || '',
+                         akarere: row['AKARERE'] || row['District'] || '',
+                         umurenge: row['UMURENGE'] || row['Sector'] || '',
+                         akagari: row['AKAGARI'] || row['Cell'] || '',
+                         umudugudu: row['UMUDUGUDU'] || row['Village'] || '',
+                         telefone: row['TELEFONE'] || row['Phone'] || ''
+                     }));
+
+                     membersData = membersData.concat(newMembers);
+                     saveMembersData();
+                     renderMembersTable();
+                     alert(`${newMembers.length} abantu bongewemo neza!`);
+                 } catch (error) {
+                     alert("Ikosa ryabaye mu gusoma Excel file: " + error.message);
+                 }
+             };
+             reader.readAsArrayBuffer(file);
+         }
+
+
+         
+
+
+         
+
+         
+         
+         
+         
+         function generateReports() {
+             // Export to Excel
+             const ws = XLSX.utils.json_to_sheet(membersData);
+             const wb = XLSX.utils.book_new();
+             XLSX.utils.book_append_sheet(wb, ws, "Members");
+             XLSX.writeFile(wb, "faith_evangelical_members.xlsx");
+             alert("Raporo yakoze neza!");
+         }
+     </script>
+</body>
+</html>

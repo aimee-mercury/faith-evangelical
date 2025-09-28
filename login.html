@@ -4,68 +4,322 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Login • Faith Evangelical Church</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .auth-wrap{min-height:100vh;display:grid;place-items:center;background:#f5f5f5}
-        .auth-card{background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.12);padding:28px;width:min(420px,92%)}
-        .auth-card h1{margin:0 0 6px}
-        .auth-card p{margin:0 0 18px}
-        .field{display:grid;gap:6px;margin:10px 0}
-        .field input{padding:12px;border:1px solid #ddd;border-radius:8px;font-family:inherit}
-        .btn{width:100%}
-        .note{font-size:12px;color:#6b7280;margin-top:10px}
-        .err{color:#b21e35;margin:6px 0 0;font-size:14px}
-        .links{display:flex;justify-content:space-between;margin-top:10px}
-        .links a{color:var(--primary)}
+        .login-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .login-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        .login-header {
+            margin-bottom: 30px;
+        }
+        .login-header .logo {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .login-header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .login-header p {
+            color: #666;
+            font-size: 16px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: #2c3e50;
+            box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+        }
+        .form-control.error {
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(44, 62, 80, 0.3);
+        }
+        .btn-back {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-back:hover {
+            color: #764ba2;
+        }
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .success-message {
+            background: #efe;
+            color: #3c3;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .forgot-password {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .forgot-password:hover {
+            color: #764ba2;
+        }
     </style>
-    <script>
-        (function(){
-            const AUTH_KEY='fec_auth';
-            document.addEventListener('DOMContentLoaded',()=>{
-                const form=document.getElementById('loginForm');
-                const err=document.getElementById('err');
-                form.addEventListener('submit',(e)=>{
-                    e.preventDefault();
-                    const email=document.getElementById('email').value.trim();
-                    const password=document.getElementById('password').value;
-                    if(email==='aimee@gmail.com' && password==='12345'){
-                        localStorage.setItem(AUTH_KEY, JSON.stringify({ email, at: Date.now() }));
-                        window.location.href='admin.html';
-                    } else {
-                        err.textContent='Invalid email or password';
-                    }
-                });
-            });
-        })();
-    </script>
 </head>
 <body>
-    <div class="auth-wrap">
-        <div class="auth-card">
-            <h1>Staff Login</h1>
-            <p>Restricted area for church staff.</p>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo">
+                    <span class="flaticon-bible"></span>
+                </div>
+                <h1>Staff Login</h1>
+                <p>Access the Faith Evangelical Church Admin Dashboard</p>
+            </div>
+            
+            <div id="errorMessage" class="error-message"></div>
+            <div id="successMessage" class="success-message"></div>
+            
             <form id="loginForm">
-                <div class="field">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" required placeholder="name@example.com">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    <div class="error-message" id="emailError">Please enter your email address</div>
                 </div>
-                <div class="field">
+                
+                <div class="form-group">
                     <label for="password">Password</label>
-                    <input id="password" type="password" required placeholder="•••••">
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    <div class="error-message" id="passwordError">Please enter your password</div>
                 </div>
-                <button class="btn" type="submit">Sign In</button>
-                <div id="err" class="err"></div>
+                
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="btn-login">
+                    <span class="icon-lock"></span> Sign In
+                </button>
             </form>
-            <div class="links">
-                <a href="index.html">← Back to site</a>
-                <span class="note">Use your staff credentials</span>
+            
+            <div class="text-center">
+               
+                <a href="index.html" class="btn-back">
+                    <span class="icon-arrow-left"></span> Back to Website
+                </a>
             </div>
         </div>
     </div>
+
+    <script>
+        function validateForm(email, password) {
+            // Clear previous errors
+            document.getElementById('email').classList.remove('error');
+            document.getElementById('password').classList.remove('error');
+            document.getElementById('emailError').style.display = 'none';
+            document.getElementById('passwordError').style.display = 'none';
+            
+            let isValid = true;
+            
+            // Validate email
+            if (!email) {
+                document.getElementById('email').classList.add('error');
+                document.getElementById('emailError').textContent = 'Please enter your email address';
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                document.getElementById('email').classList.add('error');
+                document.getElementById('emailError').textContent = 'Please enter a valid email address';
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate password
+            if (!password) {
+                document.getElementById('password').classList.add('error');
+                document.getElementById('passwordError').textContent = 'Please enter your password';
+                document.getElementById('passwordError').style.display = 'block';
+                isValid = false;
+            } else if (password.length < 3) {
+                document.getElementById('password').classList.add('error');
+                document.getElementById('passwordError').textContent = 'Password must be at least 3 characters';
+                document.getElementById('passwordError').style.display = 'block';
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Check if user is already logged in
+            const authData = localStorage.getItem('fec_auth');
+            if (authData) {
+                const auth = JSON.parse(authData);
+                if (auth.email && Date.now() - auth.at < 24 * 60 * 60 * 1000) { // 24 hours
+                    window.location.href = 'dashboard.html';
+                }
+            }
+            
+            // Real-time validation
+            document.getElementById('email').addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.classList.remove('error');
+                    document.getElementById('emailError').style.display = 'none';
+                }
+            });
+            
+            document.getElementById('password').addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.classList.remove('error');
+                    document.getElementById('passwordError').style.display = 'none';
+                }
+            });
+            
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('email').value.trim();
+                const password = document.getElementById('password').value;
+                const rememberMe = document.getElementById('rememberMe').checked;
+                
+                // Hide previous messages
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'none';
+                
+                // Enhanced validation
+                if (!validateForm(email, password)) {
+                    return;
+                }
+                
+                // Demo credentials (replace with real authentication)
+                if (email === 'aimee@gmail.com' && password === '12345@') {
+                    // Store auth data
+                    const authData = {
+                        email: email,
+                        at: Date.now(),
+                        remember: rememberMe,
+                        role: 'admin'
+                    };
+                    localStorage.setItem('fec_auth', JSON.stringify(authData));
+                    
+                    showSuccess('Login successful! Redirecting...');
+                    
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1500);
+                } else {
+                    showError('Invalid email or password. Please try again.');
+                }
+            });
+            
+            function showError(message) {
+                errorMessage.textContent = message;
+                errorMessage.style.display = 'block';
+            }
+            
+            function showSuccess(message) {
+                successMessage.textContent = message;
+                successMessage.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
-
-

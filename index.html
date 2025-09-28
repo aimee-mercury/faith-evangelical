@@ -1,418 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <title>Faith Evangelical Church</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-icon">FEC</div>
-                <div class="logo-text">
-                    <h1>Faith Evangelical Church</h1>
-                    <p>Faith • Hope • Love</p>
-                </div>
-            </div>
-            <nav>
-                <button class="mobile-menu-btn">☰</button>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#ministries">Ministries</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Media</a></li>
-                    <li><a href="login.html">Staff</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-media" aria-hidden="true">
-                <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"></video>
-            </div>
-            <div class="hero-content">
-                <h1>Welcome Home</h1>
-                <p>We are a Christ-centered community dedicated to worship, discipleship, and serving our city. There's a place for you here.</p>
-                <div class="hero-btns">
-                    <a href="#gallery" class="btn">Watch Services</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
-                <div class="scripture"><span id="scriptureText">“For the Son of Man came to seek and to save the lost.” — Luke 19:10</span></div>
-            </div>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span class="flaticon-bible"></span> Faith Evangelical Church</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+                <li class="nav-item"><a href="login.html" class="nav-link"><span>Staff Login</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#services-section" class="nav-link"><span>Ministries</span></a></li>
+	          <li class="nav-item"><a href="#events-section" class="nav-link"><span>Events</span></a></li
+	          <li class="nav-item"><a href="#pastor-section" class="nav-link"><span>Elders</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section class="home-slider js-fullheight owl-carousel">
+      <div class="slider-item js-fullheight">
+      	<!-- Video Background -->
+      	<video autoplay muted loop playsinline class="hero-video">
+      		<source src="https://cdn.pixabay.com/vimeo/371433846/church-236.mp4?width=1920" type="video/mp4">
+      		<source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=165" type="video/mp4">
+      		<source src="https://cdn.pixabay.com/vimeo/371433846/church-236.mp4?width=1920" type="video/mp4">
+      		<!-- Fallback image if video doesn't load -->
+      		<img src="images/bg_2.jpg" alt="Church Background" style="width: 100%; height: 100%; object-fit: cover;">
+      	</video>
+      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	          <div class="col-md-8 text-center ftco-animate mt-5">
+	          	<div class="text">
+	          		<div class="subheading">
+	          			<span>Faith • Hope • Love</span>
+	          		</div>
+		            <h1 class="mb-4">Faith Evangelical <span>Church</span></h1>
+		            <p>Where faith meets community, hope transforms lives, and love conquers all.</p>
+		            <p><em>"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."</em> — John 3:16</p>
+		            <p><a href="#" class="btn btn-primary py-2 px-4">Be part of us</a> <a href="#about-section" class="btn btn-primary btn-outline-primary py-2 px-4 home-slider">About us</a></p>
+	            </div>
+	          </div>
+	        </div>
         </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Faith Evangelical Church</h2>
-                    <p>Faith Evangelical Church is a welcoming family of believers. We gather weekly to worship Jesus, grow through God's Word, and serve our neighbors with compassion. Whether you're exploring faith or seeking a church home, you are welcome here.</p>
-                    <p>Since our founding in 1996, we've been committed to preaching the Gospel in every sermon and creating a community where people can grow in their relationship with God.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h3>27+</h3>
-                            <p>Years of Ministry</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>500+</h3>
-                            <p>Active Members</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>15+</h3>
-                            <p>Community Programs</p>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn">Visit Us</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1517963628607-235ccdd5476b?q=80&w=1400&auto=format&fit=crop" alt="Members worshipping joyfully">
-                </div>
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about-section" id="about-section">
+    	<div class="container-fluid px-0">
+    		<div class="row d-md-flex text-wrapper">
+					<div class="one-half img" style="background-image: url('images/about.jpg');"></div>
+					<div class="one-half half-text d-flex justify-content-end align-items-center ftco-animate">
+						<div class="text-inner pl-md-5">
+              <h3 class="heading">Welcome to <span>Faith Evangelical </span>Church</h3>
+              <p>Faith Evangelical Church stands as a beacon of hope in our community, dedicated to proclaiming the Gospel of Jesus Christ and nurturing spiritual growth. We believe in the power of God's Word to transform lives and the importance of Christian fellowship.</p>
+              <p>Founded on biblical principles, our church has been serving families and individuals since 1996. We are committed to worship that glorifies God, teaching that edifies believers, and outreach that demonstrates Christ's love to our neighbors.</p>
+              <p><em>"And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another."</em> — Hebrews 10:24-25</p>
+              <ul class="my-4">
+              	<li><span class="ion-ios-checkmark-circle mr-2"></span> Biblical teaching and preaching</li>
+              	<li><span class="ion-ios-checkmark-circle mr-2"></span> Loving Christian community</li>
+              	<li><span class="ion-ios-checkmark-circle mr-2"></span> Outreach and service opportunities</li>
+              </ul>
             </div>
-        </div>
+					</div>
+    		</div>
+    	</div>
     </section>
 
-    <!-- Ministries Section -->
-    <section id="ministries" class="ministries">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Ministries</h2>
-                <p>Discover opportunities to grow, serve, and connect with others in our church family.</p>
-            </div>
-            <div class="ministry-cards">
-                <div class="ministry-card">
-                    <div class="ministry-img">
-                        <img src="https://images.unsplash.com/photo-1520975922421-c6e8d5d64c60?q=80&w=1400&auto=format&fit=crop" alt="Children's Ministry">
-                    </div>
-                    <div class="ministry-content">
-                        <h3>Children's Ministry</h3>
-                        <p>Our children's ministry provides a safe and nurturing environment where kids learn about God's love through engaging activities and Bible lessons.</p>
-                        <a href="#" class="read-more">Learn More</a>
-                    </div>
-                </div>
-                <div class="ministry-card">
-                    <div class="ministry-img">
-                        <img src="https://images.unsplash.com/photo-1515165562835-c3b8c814f052?q=80&w=1400&auto=format&fit=crop" alt="Youth Ministry">
-                    </div>
-                    <div class="ministry-content">
-                        <h3>Youth Ministry</h3>
-                        <p>We help teenagers navigate their faith journey through relevant teaching, fellowship, and service opportunities that strengthen their relationship with Christ.</p>
-                        <a href="#" class="read-more">Learn More</a>
-                    </div>
-                </div>
-                <div class="ministry-card">
-                    <div class="ministry-img">
-                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop" alt="Adult Ministry">
-                    </div>
-                    <div class="ministry-content">
-                        <h3>Adult Ministry</h3>
-                        <p>Our adult ministries provide opportunities for spiritual growth, fellowship, and service through small groups, Bible studies, and outreach programs.</p>
-                        <a href="#" class="read-more">Learn More</a>
-                    </div>
-                </div>
-                <div class="ministry-card">
-                    <div class="ministry-img">
-                        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1400&auto=format&fit=crop" alt="Outreach Ministry">
-                    </div>
-                    <div class="ministry-content">
-                        <h3>Outreach Ministry</h3>
-                        <p>We're passionate about serving our community through food drives, neighborhood cleanups, and partnerships with local organizations.</p>
-                        <a href="#" class="read-more">Learn More</a>
-                    </div>
-                </div>
-            </div>
+    
+		<section class="ftco-section ftco-services-2" id="services-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<span class="subheading">Our Ministries</span>
+            <h2 class="mb-4">Serving God & Community</h2>
+            <p>Discover opportunities to grow in faith, serve others, and connect with our church family. <em>"Each of you should use whatever gift you have received to serve others, as faithful stewards of God's grace in its various forms."</em> — 1 Peter 4:10</p>
+          </div>
         </div>
+        <div class="row">
+        	<div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon"><span class="flaticon-praying"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Prayer Ministry</h3>
+                <p>Join us in corporate prayer and intercession for our church and community. <em>"For where two or three gather in my name, there am I with them."</em> — Matthew 18:20</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon"><span class="flaticon-bible"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Bible Study</h3>
+                <p>Deep dive into God's Word for spiritual growth and understanding. <em>"All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness."</em> — 2 Timothy 3:16</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon"><span class="flaticon-church"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Sunday Worship</h3>
+                <p>Experience powerful worship and life-changing biblical teaching. <em>"Let everything that has breath praise the Lord. Praise the Lord."</em> — Psalm 150:6</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon"><span class="flaticon-rings"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Youth Ministry</h3>
+                <p>Empowering the next generation to live boldly for Christ. <em>"Don't let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity."</em> — 1 Timothy 4:12</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+              <div class="icon"><span class="flaticon-social-care"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Outreach Ministry</h3>
+                <p>Extending God's love beyond our walls through community service. <em>"In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven."</em> — Matthew 5:16</p>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+
+		<section class="ftco-intro img" id="events-section" style="background-image: url(images/bg_3.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section bg-light ftco-event" id="events-section">
+			<div class="container-fluid px-4 ftco-to-top">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<span class="subheading">Events</span>
+            <h2 class="mb-5">Week Plans</h2>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-12 col-lg-6 col-xl-4">
+        		<div class="event-wrap d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/event-1.jpg);"></div>
+        			<div class="text p-4 d-flex align-items-center">
+        				<div>
+	        				<span class="time"> 07:00 & 10:00am</span>
+	        				<h3><a href="#">Sunday Morning Worship</a></h3>
+	        				<div class="meta">
+		        				<p><span class="icon-location"></span> Gatsata </p>
+		        				<p class="mb-0"><a href="#" class="btn btn-primary">Join Us</a></p>
+	        				</div>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-12 col-lg-6 col-xl-4">
+        		<div class="event-wrap d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/event-2.jpg);"></div>
+        			<div class="text p-4 d-flex align-items-center">
+        				<div>
+	        				<span class="time">5:00pm - 8:00pm</span>
+	        				<h3><a href="#">Wednesday Prayer Night</a></h3>
+	        				<div class="meta">
+		        				<p><span class="icon-location"></span> Gatsata </p>
+		        				<p class="mb-0"><a href="#" class="btn btn-primary">Join Us</a></p>
+	        				</div>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-12 col-lg-6 col-xl-4">
+        		<div class="event-wrap d-flex ftco-animate">
+        			<div class="img" style="background-image: url(images/event-3.jpg);"></div>
+        			<div class="text p-4 d-flex align-items-center">
+        				<div>
+	        				<span class="time">5:00pm - 8:00pm</span>
+	        				<h3><a href="#">Friday night of warship</a></h3>
+	        				<div class="meta">
+		        				<p><span class="icon-location"></span> Gatsata</p>
+		        				<p class="mb-0"><a href="#" class="btn btn-primary">Join Us</a></p>
+	        				</div>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+
+   
+		</section>
+
+
+	
+
+
+		<section class="ftco-daily-verse img" style="background-image: url(images/bg_4.jpg);">
+			<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-10">
+		    		<div class="row justify-content-center align-items-center">
+		    			<div class="col-md-2 ftco-animate">
+		    				<div class="icon">
+		    					<span class="flaticon-church"></span>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-10 daily-verse pl-md-5 ftco-animate">
+		    				<span class="subheading">Daily Scripture:</span>
+		    				<h3>"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, to give you hope and a future."</h3>
+		    				<h4 class="h5 mt-4 font-weight-bold"><span></span> Jeremiah 29:11 NIV</h4>
+		    			</div>
+		    		</div>
+		    	</div>
+	    	</div>
+    	</div>
     </section>
 
-    <!-- Events Section -->
-    <section id="events" class="events">
-        <div class="container">
-            <div class="section-title">
-                <h2>Upcoming Events</h2>
-                <p>Join us for fellowship, worship, and community-building activities.</p>
-            </div>
-            <div class="events-container">
-                <div class="event-card">
-                    <div class="event-date">
-                        <span class="month">OCT</span>
-                        <span class="day">15</span>
-                    </div>
-                    <div class="event-details">
-                        <h3>Fall Festival</h3>
-                        <p class="event-time">4:00 PM - 7:00 PM</p>
-                        <p>Family-friendly event with games, food, and fellowship for all ages.</p>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="event-date">
-                        <span class="month">OCT</span>
-                        <span class="day">22</span>
-                    </div>
-                    <div class="event-details">
-                        <h3>Baptism Sunday</h3>
-                        <p class="event-time">During Worship Service</p>
-                        <p>Celebrate with those publicly declaring their faith through baptism.</p>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="event-date">
-                        <span class="month">NOV</span>
-                        <span class="day">05</span>
-                    </div>
-                    <div class="event-details">
-                        <h3>Community Food Drive</h3>
-                        <p class="event-time">9:00 AM - 12:00 PM</p>
-                        <p>Help us collect non-perishable food items for local families in need.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="events-btn">
-                <a href="#" class="btn">View All Events</a>
-            </div>
+   
+
+    <section class="ftco-section ftco-no-pb" id="pastor-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-6 heading-section text-center ftco-animate">
+          	<span class="subheading">Faith Evangelical Church</span>
+            <h2 class="mb-4">Church Leadership</h2>
+            <p>Meet our dedicated church leaders who serve with love and commitment. <em>"The elders who direct the affairs of the church well are worthy of double honor, especially those whose work is preaching and teaching."</em> — 1 Timothy 5:17</p>
+          </div>
         </div>
+        <div class="row">
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/staff-1.jpg);"></div>
+							</div>
+							<div class="text d-flex align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2">Rev. Michael Johnson</h3>
+									<span class="position mb-4">Senior Pastor</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              </ul>
+		              </div>
+		            </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/staff-2.jpg);"></div>
+							</div>
+							<div class="text d-flex align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2">Pastor Sarah Williams</h3>
+									<span class="position mb-4">Associate Pastor</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              </ul>
+		              </div>
+		            </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/staff-3.jpg);"></div>
+							</div>
+							<div class="text d-flex align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2">Elder David Martinez</h3>
+									<span class="position mb-4">Church Elder</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              </ul>
+		              </div>
+		            </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url(images/staff-4.jpg);"></div>
+							</div>
+							<div class="text d-flex align-items-center pt-3 text-center">
+								<div>
+									<h3 class="mb-2">Elder Grace Thompson</h3>
+									<span class="position mb-4">Church Elder</span>
+									<div class="faded">
+										<ul class="ftco-social text-center">
+			                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+			                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+			              </ul>
+		              </div>
+		            </div>
+							</div>
+						</div>
+					</div>
+				</div>
+    	</div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Service Times</h2>
-                <p>Join us for worship, prayer, and fellowship throughout the week.</p>
-            </div>
-            <div class="service-times">
-                <div class="service-time">
-                    <h3>Sunday Worship</h3>
-                    <p class="time">10:00 AM</p>
-                    <p>Join us for uplifting worship and Biblical teaching</p>
-                </div>
-                <div class="service-time">
-                    <h3>Prayer Night</h3>
-                    <p class="time">7:00 PM (Wednesdays)</p>
-                    <p>Corporate prayer and intercession for our church and community</p>
-                </div>
-                <div class="service-time">
-                    <h3>Youth Group</h3>
-                    <p class="time">6:30 PM (Fridays)</p>
-                    <p>Fun, fellowship and faith-building for teenagers</p>
-                </div>
-                <div class="service-time">
-                    <h3>Bible Study</h3>
-                    <p class="time">7:00 PM (Tuesdays)</p>
-                    <p>In-depth study of God's Word for spiritual growth</p>
-                </div>
-            </div>
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <span class="subheading">Faith Evangelical Church</span>
+            <h2 class="mb-4">Contact Us</h2>
+            <p>We'd love to hear from you! Reach out with questions, prayer requests, or to learn more about our church family. <em>"And pray in the Spirit on all occasions with all kinds of prayers and requests."</em> — Ephesians 6:18</p>
+          </div>
         </div>
+
+        <div class="row block-9">
+          <div class="col-md-7 order-md-last d-flex">
+            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+
+          </div>
+
+          <div class="col-md-5 d-flex">
+          	<div class="row d-flex contact-info mb-5">
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-map-signs"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Address</h3>
+				            <p>456 Grace Street, Faithville, FL 12345</p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-phone2"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Contact Number</h3>
+				            <p><a href="tel://5559876543">(555) 987-6543</a></p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-paper-plane"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Email Address</h3>
+				            <p><a href="mailto:info@faithevangelical.church">info@faithevangelical.church</a></p>
+			            </div>
+			          </div>
+		          </div>
+		          <div class="col-md-12 ftco-animate">
+		          	<div class="box p-2 px-3 bg-light d-flex">
+		          		<div class="icon mr-3">
+		          			<span class="icon-globe"></span>
+		          		</div>
+		          		<div>
+			          		<h3 class="mb-3">Website</h3>
+				            <p><a href="#">www.faithevangelical.church</a></p>
+			            </div>
+			          </div>
+		          </div>
+		        </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What People Say</h2>
-                <p>Hear from members of our church family about their experiences.</p>
-            </div>
-            <div class="testimonial-cards">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Faith Evangelical Church has been a spiritual home for our family for over 10 years. The teaching is biblical, the community is loving, and we've grown so much in our faith."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>Michael & Sarah Johnson</h4>
-                        <p>Members since 2012</p>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"As a newcomer, I was immediately welcomed and felt at home. The sermons speak directly to real-life challenges, and the small groups have helped me build meaningful relationships."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>Jessica Martinez</h4>
-                        <p>New Member</p>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Our kids love the children's ministry! The volunteers are caring and creative in teaching biblical truths in ways children can understand and apply."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>The Williams Family</h4>
-                        <p>Active Members</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Media Gallery -->
-    <section id="gallery" class="media-gallery">
-        <div class="container">
-            <div class="section-title">
-                <h2>Previous Services</h2>
-                <p>Browse through photos and videos from our recent gatherings and events.</p>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 logo"><span>Faith Evangelical </span>Church</h2>
+              <p>A place to grow in faith, hope, and love since 1996. <em>"And now these three remain: faith, hope and love. But the greatest of these is love."</em> — 1 Corinthians 13:13</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
             </div>
-            
-            <div class="upload-section">
-                <h3>Upload Media</h3>
-                <p>Add images or videos from previous services to our gallery. Files are stored locally in your browser.</p>
-                <div class="upload-controls">
-                    <input type="file" id="fileInput" accept="image/*,video/*" multiple>
-                    <button class="btn" id="uploadBtn">Upload</button>
-                    <button class="btn btn-secondary" id="clearGallery">Clear Gallery</button>
-                </div>
+          </div>
+          <div class="col-md">
+           
+          </div>
+          <div class="col-md">
+           
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Service Hours</h2>
+              <div class="opening-hours">
+              	<!-- <p>Saturday Prayer Meeting: <span class="mb-3">10:00 am to 11:30 am</span></p> -->
+              	<p>Sunday Service: <span class="mb-3">07:00 am to 9:30 am <br> 10:00 am to 12:30 am</span></p>
+              </div>
             </div>
-            
-            <div class="gallery" id="mediaGallery">
-                <div class="empty-gallery">
-                    <p>No media uploaded yet. Use the upload section above to add images or videos from previous services.</p>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+        <div class="row">
+          <div class="col-md-12 text-center">
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>We'd love to hear from you. Reach out with questions or to learn more about our church.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-details">
-                        <p>📍 123 Faith Avenue, Your City</p>
-                        <p>📞 (555) 123-4567</p>
-                        <p>✉️ hello@faithevangelical.church</p>
-                    </div>
-                    <h3>Office Hours</h3>
-                    <div class="office-hours">
-                        <p>Monday - Thursday: 9:00 AM - 5:00 PM</p>
-                        <p>Friday: 9:00 AM - 12:00 PM</p>
-                        <p>Saturday: Closed</p>
-                        <p>Sunday: 8:00 AM - 1:00 PM</p>
-                    </div>
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="YouTube">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by aimeecode studio</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Faith Evangelical Church</h3>
-                    <p>A place to grow in faith and community since 1996.</p>
-                    <div class="footer-logo">
-                        <div class="logo-icon small">FEC</div>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#ministries">Ministries</a></li>
-                        <li><a href="#events">Events</a></li>
-                        <li><a href="#services">Service Times</a></li>
-                        <li><a href="#gallery">Media Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Sermons</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Give</a></li>
-                        <li><a href="#">Volunteer</a></li>
-                        <li><a href="#">Prayer Requests</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for updates and announcements.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit" class="btn">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Faith Evangelical Church. All rights reserved.</p>
-            </div>
-        </div>
+      </div>
     </footer>
 
-    <!-- Edit Modal -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Edit Media</h3>
-            <form id="editForm">
-                <div class="form-group">
-                    <label for="editTitle">Title</label>
-                    <input type="text" id="editTitle" required>
-                </div>
-                <div class="form-group">
-                    <label for="editDescription">Description</label>
-                    <textarea id="editDescription"></textarea>
-                </div>
-                <input type="hidden" id="editId">
-                <button type="submit" class="btn">Save Changes</button>
-            </form>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
-</body>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+
+  <script src="js/main.js"></script>
+
+  </body>
 </html>
